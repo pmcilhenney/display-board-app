@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		2092343F2E19458C00E4C283 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 209234292E19458900E4C283 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 209234302E19458900E4C283;
+			remoteInfo = "GCEMS Display Board";
+		};
+		209234492E19458C00E4C283 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 209234292E19458900E4C283 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 209234302E19458900E4C283;
+			remoteInfo = "GCEMS Display Board";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		209234312E19458900E4C283 /* GCEMS Display Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GCEMS Display Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2092343E2E19458C00E4C283 /* GCEMS Display BoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GCEMS Display BoardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		209234482E19458C00E4C283 /* GCEMS Display BoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GCEMS Display BoardUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		209234332E19458900E4C283 /* GCEMS Display Board */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "GCEMS Display Board";
+			sourceTree = "<group>";
+		};
+		209234412E19458C00E4C283 /* GCEMS Display BoardTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "GCEMS Display BoardTests";
+			sourceTree = "<group>";
+		};
+		2092344B2E19458C00E4C283 /* GCEMS Display BoardUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "GCEMS Display BoardUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2092342E2E19458900E4C283 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2092343B2E19458C00E4C283 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		209234452E19458C00E4C283 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		209234282E19458900E4C283 = {
+			isa = PBXGroup;
+			children = (
+				209234332E19458900E4C283 /* GCEMS Display Board */,
+				209234412E19458C00E4C283 /* GCEMS Display BoardTests */,
+				2092344B2E19458C00E4C283 /* GCEMS Display BoardUITests */,
+				209234322E19458900E4C283 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		209234322E19458900E4C283 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				209234312E19458900E4C283 /* GCEMS Display Board.app */,
+				2092343E2E19458C00E4C283 /* GCEMS Display BoardTests.xctest */,
+				209234482E19458C00E4C283 /* GCEMS Display BoardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		209234302E19458900E4C283 /* GCEMS Display Board */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 209234522E19458C00E4C283 /* Build configuration list for PBXNativeTarget "GCEMS Display Board" */;
+			buildPhases = (
+				2092342D2E19458900E4C283 /* Sources */,
+				2092342E2E19458900E4C283 /* Frameworks */,
+				2092342F2E19458900E4C283 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				209234332E19458900E4C283 /* GCEMS Display Board */,
+			);
+			name = "GCEMS Display Board";
+			packageProductDependencies = (
+			);
+			productName = "GCEMS Display Board";
+			productReference = 209234312E19458900E4C283 /* GCEMS Display Board.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2092343D2E19458C00E4C283 /* GCEMS Display BoardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 209234552E19458C00E4C283 /* Build configuration list for PBXNativeTarget "GCEMS Display BoardTests" */;
+			buildPhases = (
+				2092343A2E19458C00E4C283 /* Sources */,
+				2092343B2E19458C00E4C283 /* Frameworks */,
+				2092343C2E19458C00E4C283 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				209234402E19458C00E4C283 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				209234412E19458C00E4C283 /* GCEMS Display BoardTests */,
+			);
+			name = "GCEMS Display BoardTests";
+			packageProductDependencies = (
+			);
+			productName = "GCEMS Display BoardTests";
+			productReference = 2092343E2E19458C00E4C283 /* GCEMS Display BoardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		209234472E19458C00E4C283 /* GCEMS Display BoardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 209234582E19458C00E4C283 /* Build configuration list for PBXNativeTarget "GCEMS Display BoardUITests" */;
+			buildPhases = (
+				209234442E19458C00E4C283 /* Sources */,
+				209234452E19458C00E4C283 /* Frameworks */,
+				209234462E19458C00E4C283 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2092344A2E19458C00E4C283 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				2092344B2E19458C00E4C283 /* GCEMS Display BoardUITests */,
+			);
+			name = "GCEMS Display BoardUITests";
+			packageProductDependencies = (
+			);
+			productName = "GCEMS Display BoardUITests";
+			productReference = 209234482E19458C00E4C283 /* GCEMS Display BoardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		209234292E19458900E4C283 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					209234302E19458900E4C283 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					2092343D2E19458C00E4C283 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 209234302E19458900E4C283;
+					};
+					209234472E19458C00E4C283 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 209234302E19458900E4C283;
+					};
+				};
+			};
+			buildConfigurationList = 2092342C2E19458900E4C283 /* Build configuration list for PBXProject "GCEMS Display Board" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 209234282E19458900E4C283;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 209234322E19458900E4C283 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				209234302E19458900E4C283 /* GCEMS Display Board */,
+				2092343D2E19458C00E4C283 /* GCEMS Display BoardTests */,
+				209234472E19458C00E4C283 /* GCEMS Display BoardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2092342F2E19458900E4C283 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2092343C2E19458C00E4C283 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		209234462E19458C00E4C283 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2092342D2E19458900E4C283 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2092343A2E19458C00E4C283 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		209234442E19458C00E4C283 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		209234402E19458C00E4C283 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 209234302E19458900E4C283 /* GCEMS Display Board */;
+			targetProxy = 2092343F2E19458C00E4C283 /* PBXContainerItemProxy */;
+		};
+		2092344A2E19458C00E4C283 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 209234302E19458900E4C283 /* GCEMS Display Board */;
+			targetProxy = 209234492E19458C00E4C283 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		209234502E19458C00E4C283 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 57AKQLQ9VS;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		209234512E19458C00E4C283 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 57AKQLQ9VS;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		209234532E19458C00E4C283 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 57AKQLQ9VS;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.gcems.GCEMS-Display-Board";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		209234542E19458C00E4C283 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 57AKQLQ9VS;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.gcems.GCEMS-Display-Board";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		209234562E19458C00E4C283 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 57AKQLQ9VS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.gcems.GCEMS-Display-BoardTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GCEMS Display Board.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GCEMS Display Board";
+			};
+			name = Debug;
+		};
+		209234572E19458C00E4C283 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 57AKQLQ9VS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.gcems.GCEMS-Display-BoardTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GCEMS Display Board.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GCEMS Display Board";
+			};
+			name = Release;
+		};
+		209234592E19458C00E4C283 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 57AKQLQ9VS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.gcems.GCEMS-Display-BoardUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GCEMS Display Board";
+			};
+			name = Debug;
+		};
+		2092345A2E19458C00E4C283 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 57AKQLQ9VS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.gcems.GCEMS-Display-BoardUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GCEMS Display Board";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2092342C2E19458900E4C283 /* Build configuration list for PBXProject "GCEMS Display Board" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				209234502E19458C00E4C283 /* Debug */,
+				209234512E19458C00E4C283 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		209234522E19458C00E4C283 /* Build configuration list for PBXNativeTarget "GCEMS Display Board" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				209234532E19458C00E4C283 /* Debug */,
+				209234542E19458C00E4C283 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		209234552E19458C00E4C283 /* Build configuration list for PBXNativeTarget "GCEMS Display BoardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				209234562E19458C00E4C283 /* Debug */,
+				209234572E19458C00E4C283 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		209234582E19458C00E4C283 /* Build configuration list for PBXNativeTarget "GCEMS Display BoardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				209234592E19458C00E4C283 /* Debug */,
+				2092345A2E19458C00E4C283 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 209234292E19458900E4C283 /* Project object */;
+}

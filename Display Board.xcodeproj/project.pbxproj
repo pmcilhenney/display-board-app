@@ -24,15 +24,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		204835272E2A977F0012F952 /* GCEMS Display Board.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "GCEMS Display Board.xctestplan"; sourceTree = "<group>"; };
 		209234312E19458900E4C283 /* GCEMS Display Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GCEMS Display Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2092343E2E19458C00E4C283 /* GCEMS Display BoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GCEMS Display BoardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		209234482E19458C00E4C283 /* GCEMS Display BoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GCEMS Display BoardUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		209234332E19458900E4C283 /* GCEMS Display Board */ = {
+		209234332E19458900E4C283 /* Display Board */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "GCEMS Display Board";
+			path = "Display Board";
 			sourceTree = "<group>";
 		};
 		209234412E19458C00E4C283 /* GCEMS Display BoardTests */ = {
@@ -75,7 +76,8 @@
 		209234282E19458900E4C283 = {
 			isa = PBXGroup;
 			children = (
-				209234332E19458900E4C283 /* GCEMS Display Board */,
+				204835272E2A977F0012F952 /* GCEMS Display Board.xctestplan */,
+				209234332E19458900E4C283 /* Display Board */,
 				209234412E19458C00E4C283 /* GCEMS Display BoardTests */,
 				2092344B2E19458C00E4C283 /* GCEMS Display BoardUITests */,
 				209234322E19458900E4C283 /* Products */,
@@ -108,7 +110,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				209234332E19458900E4C283 /* GCEMS Display Board */,
+				209234332E19458900E4C283 /* Display Board */,
 			);
 			name = "GCEMS Display Board";
 			packageProductDependencies = (
@@ -186,7 +188,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2092342C2E19458900E4C283 /* Build configuration list for PBXProject "GCEMS Display Board" */;
+			buildConfigurationList = 2092342C2E19458900E4C283 /* Build configuration list for PBXProject "Display Board" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -397,9 +399,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 57AKQLQ9VS;
+				DEVELOPMENT_TEAM = XN2T2J875A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GCEMS-Display-Board-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Display Board";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -425,9 +430,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 57AKQLQ9VS;
+				DEVELOPMENT_TEAM = XN2T2J875A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GCEMS-Display-Board-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Display Board";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -452,7 +460,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 57AKQLQ9VS;
+				DEVELOPMENT_TEAM = XN2T2J875A;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				MARKETING_VERSION = 1.0;
@@ -471,7 +479,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 57AKQLQ9VS;
+				DEVELOPMENT_TEAM = XN2T2J875A;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				MARKETING_VERSION = 1.0;
@@ -489,10 +497,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 57AKQLQ9VS;
+				DEVELOPMENT_TEAM = XN2T2J875A;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.gcems.GCEMS-Display-BoardUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gcems.displayboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -506,10 +514,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 57AKQLQ9VS;
+				DEVELOPMENT_TEAM = XN2T2J875A;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.gcems.GCEMS-Display-BoardUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gcems.displayboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -521,7 +529,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2092342C2E19458900E4C283 /* Build configuration list for PBXProject "GCEMS Display Board" */ = {
+		2092342C2E19458900E4C283 /* Build configuration list for PBXProject "Display Board" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				209234502E19458C00E4C283 /* Debug */,

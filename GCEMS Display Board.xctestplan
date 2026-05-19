@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "7E0107D7-4AA8-482A-BCDA-D8B9C1157927",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Display Board.xcodeproj",
+      "identifier" : "209234302E19458900E4C283",
+      "name" : "GCEMS Display Board"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Display Board.xcodeproj",
+        "identifier" : "2092343D2E19458C00E4C283",
+        "name" : "GCEMS Display BoardTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Display Board.xcodeproj",
+        "identifier" : "209234472E19458C00E4C283",
+        "name" : "GCEMS Display BoardUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

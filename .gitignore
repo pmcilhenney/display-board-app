@@ -1,0 +1,13 @@
+.DS_Store
+DerivedData/
+build/
+*.xcarchive
+*.ipa
+
+# Local Xcode user state
+*.xcuserstate
+xcuserdata/
+
+# Ad-hoc export output folders
+*UITests 20*/
+3 - *UITests 20*/

@@ -27,6 +27,16 @@ struct AppConfig {
         managedHomepageURL ?? normalizedURLString(localURL)
     }
 
+    static func saveLocalHomepageURL(_ urlString: String) {
+        UserDefaults.standard.set(urlString, forKey: localHomepageURLKey)
+        UserDefaults.standard.synchronize()
+    }
+
+    static func clearLocalHomepageURL() {
+        UserDefaults.standard.removeObject(forKey: localHomepageURLKey)
+        UserDefaults.standard.synchronize()
+    }
+
     static func normalizedURLString(_ urlString: String?) -> String? {
         guard let urlString else { return nil }
 
@@ -172,18 +182,14 @@ struct WebView: UIViewRepresentable {
                     completionHandler(.useCredential, credential)
                     return
                 } else {
-                    // No identity available to the app: fail the load.
-                    didFail = true
-                    completionHandler(.cancelAuthenticationChallenge, nil)
+                    completionHandler(.performDefaultHandling, nil)
                     return
                 }
             }
 
-            // 2) Server Trust: generally allow default handling.
-            // If you have a private CA and need to trust it, that should be done via profiles (not here).
-            if method == NSURLAuthenticationMethodServerTrust,
-               let trust = challenge.protectionSpace.serverTrust {
-                completionHandler(.useCredential, URLCredential(trust: trust))
+            // 2) Server Trust: use system/profile trust evaluation.
+            if method == NSURLAuthenticationMethodServerTrust {
+                completionHandler(.performDefaultHandling, nil)
                 return
             }
 
@@ -233,6 +239,7 @@ struct ContentView: View {
                 hasManagedURL: AppConfig.hasManagedHomepageURL,
                 didFail: didFail,
                 onSave: { newURL in
+                    AppConfig.saveLocalHomepageURL(newURL)
                     localHomepageURL = newURL
                     didFail = false
                     resetMaintenanceTapSequence()
@@ -262,6 +269,7 @@ struct ContentView: View {
 
         guard maintenanceTapCount >= maintenanceTapLimit else { return }
 
+        AppConfig.clearLocalHomepageURL()
         localHomepageURL = ""
         didFail = false
         resetMaintenanceTapSequence()
@@ -313,10 +321,11 @@ struct SetupLandingPage: View {
 
                     Text("Display Board Setup")
                         .font(.system(size: 36, weight: .bold, design: .rounded))
+                        .foregroundStyle(.black)
 
                     Text(statusText)
                         .font(.title3)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(.black)
                         .multilineTextAlignment(.center)
                         .frame(maxWidth: 680)
                 }
@@ -327,12 +336,13 @@ struct SetupLandingPage: View {
                         .autocorrectionDisabled()
                         .keyboardType(.URL)
                         .disabled(hasManagedURL)
+                        .foregroundStyle(.black)
                         .padding(16)
-                        .background(Color(.secondarySystemGroupedBackground))
+                        .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 8))
                         .overlay {
                             RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color(.separator), lineWidth: 1)
+                                .stroke(Color.black.opacity(0.35), lineWidth: 1)
                         }
 
                     if let validationMessage {

@@ -28,4 +28,17 @@ struct GCEMS_Display_BoardTests {
         #expect(AppConfig.homepageURL(localURL: "https://local.example.com") == "https://managed.example.com")
     }
 
+    @Test func localHomepageURLCanBeSavedAndCleared() async throws {
+        AppConfig.clearLocalHomepageURL()
+        defer {
+            AppConfig.clearLocalHomepageURL()
+        }
+
+        AppConfig.saveLocalHomepageURL("https://local.example.com")
+        #expect(AppConfig.homepageURL() == "https://local.example.com")
+
+        AppConfig.clearLocalHomepageURL()
+        #expect(AppConfig.homepageURL() == nil)
+    }
+
 }

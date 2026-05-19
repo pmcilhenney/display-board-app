@@ -5,9 +5,10 @@ import Security
 // MARK: - AppConfig for reading managed AppConfig
 struct AppConfig {
     static let localHomepageURLKey = "homepageURL"
+    static let managedKey = "com.apple.configuration.managed"
 
     static var managed: [String: Any]? {
-        UserDefaults.standard.dictionary(forKey: "com.apple.configuration.managed")
+        UserDefaults.standard.dictionary(forKey: managedKey)
     }
 
     static var hasManagedHomepageURL: Bool {
@@ -67,11 +68,39 @@ struct AppConfig {
         }
         return nil
     }
+
+    static var clientCertPKCS12Data: Data? {
+        guard let managedConfig = managed,
+              let base64String = managedConfig["clientCertPKCS12Base64"] as? String else {
+            return nil
+        }
+
+        let cleaned = base64String
+            .components(separatedBy: .whitespacesAndNewlines)
+            .joined()
+
+        return Data(base64Encoded: cleaned)
+    }
+
+    static var clientCertPKCS12Password: String? {
+        guard let managedConfig = managed,
+              let password = managedConfig["clientCertPKCS12Password"] as? String,
+              !password.isEmpty else {
+            return nil
+        }
+
+        return password
+    }
 }
 
 // MARK: - Keychain helper to fetch a client identity (SecIdentity)
 enum ClientIdentity {
     static func findIdentity(preferredLabel: String? = nil) -> SecIdentity? {
+        if let identity = findManagedPKCS12Identity() {
+            print("Client certificate: using identity from managed PKCS#12 AppConfig.")
+            return identity
+        }
+
         // Base query: search identities (certificate + private key)
         var query: [String: Any] = [
             kSecClass as String: kSecClassIdentity,
@@ -84,6 +113,7 @@ enum ClientIdentity {
         if let label = preferredLabel {
             query[kSecAttrLabel as String] = label
             if let identity = firstIdentity(matching: query) {
+                print("Client certificate: using identity matching clientCertLabel.")
                 return identity
             }
 
@@ -95,11 +125,40 @@ enum ClientIdentity {
         return firstIdentity(matching: query)
     }
 
+    private static func findManagedPKCS12Identity() -> SecIdentity? {
+        guard let pkcs12Data = AppConfig.clientCertPKCS12Data,
+              let password = AppConfig.clientCertPKCS12Password else {
+            return nil
+        }
+
+        let options = [kSecImportExportPassphrase as String: password]
+        var importedItems: CFArray?
+        let status = SecPKCS12Import(pkcs12Data as CFData, options as CFDictionary, &importedItems)
+
+        guard status == errSecSuccess,
+              let items = importedItems as? [[String: Any]] else {
+            print("Client certificate: managed PKCS#12 import failed with status \(status).")
+            return nil
+        }
+
+        for item in items {
+            if let identity = item[kSecImportItemIdentity as String] {
+                return (identity as! SecIdentity)
+            }
+        }
+
+        print("Client certificate: managed PKCS#12 import succeeded but no identity was found.")
+        return nil
+    }
+
     private static func firstIdentity(matching query: [String: Any]) -> SecIdentity? {
         var item: CFTypeRef?
         let status = SecItemCopyMatching(query as CFDictionary, &item)
 
-        guard status == errSecSuccess else { return nil }
+        guard status == errSecSuccess else {
+            print("Client certificate: keychain identity lookup failed with status \(status).")
+            return nil
+        }
 
         // If we asked for "all", we may get an array; if not, a single ref.
         if let array = item as? [Any], let first = array.first {
@@ -182,6 +241,7 @@ struct WebView: UIViewRepresentable {
                     completionHandler(.useCredential, credential)
                     return
                 } else {
+                    print("Client certificate: no app-visible identity found; using WebKit default handling.")
                     completionHandler(.performDefaultHandling, nil)
                     return
                 }

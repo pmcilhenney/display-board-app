@@ -20,12 +20,21 @@ struct GCEMS_Display_BoardTests {
     }
 
     @Test func managedURLTakesPrecedenceOverLocalURL() async throws {
-        UserDefaults.standard.set(["homepageURL": "https://managed.example.com"], forKey: "com.apple.configuration.managed")
+        UserDefaults.standard.set(["homepageURL": "https://managed.example.com"], forKey: AppConfig.managedKey)
         defer {
-            UserDefaults.standard.removeObject(forKey: "com.apple.configuration.managed")
+            UserDefaults.standard.removeObject(forKey: AppConfig.managedKey)
         }
 
         #expect(AppConfig.homepageURL(localURL: "https://local.example.com") == "https://managed.example.com")
+    }
+
+    @Test func managedPKCS12DataCanContainWhitespace() async throws {
+        UserDefaults.standard.set(["clientCertPKCS12Base64": " aGVs\n bG8= "], forKey: AppConfig.managedKey)
+        defer {
+            UserDefaults.standard.removeObject(forKey: AppConfig.managedKey)
+        }
+
+        #expect(AppConfig.clientCertPKCS12Data == Data("hello".utf8))
     }
 
     @Test func localHomepageURLCanBeSavedAndCleared() async throws {

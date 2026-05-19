@@ -195,34 +195,81 @@ struct WebView: UIViewRepresentable {
 
 // MARK: - Main Content View
 struct ContentView: View {
+    private let maintenanceTapLimit = 7
+    private let maintenanceTapWindow: TimeInterval = 5
+
     @AppStorage(AppConfig.localHomepageURLKey) private var localHomepageURL = ""
     @State private var didFail = false
+    @State private var maintenanceTapCount = 0
+    @State private var firstMaintenanceTapDate: Date?
 
     private var homepageURL: String? {
         AppConfig.homepageURL(localURL: localHomepageURL)
     }
 
     var body: some View {
-        Group {
-            if let homepageURL, !didFail {
-                WebView(urlString: homepageURL, didFail: $didFail)
-                    .id(homepageURL)
-                    .edgesIgnoringSafeArea(.all)
-            } else {
-                SetupLandingPage(
-                    initialURL: localHomepageURL,
-                    hasManagedURL: AppConfig.hasManagedHomepageURL,
-                    didFail: didFail,
-                    onSave: { newURL in
-                        localHomepageURL = newURL
-                        didFail = false
-                    },
-                    onRetry: {
-                        didFail = false
-                    }
-                )
-            }
+        ZStack(alignment: .topLeading) {
+            content
+
+            Color.clear
+                .frame(width: 96, height: 96)
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    registerMaintenanceTap()
+                }
+                .accessibilityHidden(true)
         }
+    }
+
+    @ViewBuilder
+    private var content: some View {
+        if let homepageURL, !didFail {
+            WebView(urlString: homepageURL, didFail: $didFail)
+                .id(homepageURL)
+                .edgesIgnoringSafeArea(.all)
+        } else {
+            SetupLandingPage(
+                initialURL: localHomepageURL,
+                hasManagedURL: AppConfig.hasManagedHomepageURL,
+                didFail: didFail,
+                onSave: { newURL in
+                    localHomepageURL = newURL
+                    didFail = false
+                    resetMaintenanceTapSequence()
+                },
+                onRetry: {
+                    didFail = false
+                    resetMaintenanceTapSequence()
+                }
+            )
+        }
+    }
+
+    private func registerMaintenanceTap() {
+        guard !AppConfig.hasManagedHomepageURL else {
+            resetMaintenanceTapSequence()
+            return
+        }
+
+        let now = Date()
+        if let firstMaintenanceTapDate,
+           now.timeIntervalSince(firstMaintenanceTapDate) <= maintenanceTapWindow {
+            maintenanceTapCount += 1
+        } else {
+            firstMaintenanceTapDate = now
+            maintenanceTapCount = 1
+        }
+
+        guard maintenanceTapCount >= maintenanceTapLimit else { return }
+
+        localHomepageURL = ""
+        didFail = false
+        resetMaintenanceTapSequence()
+    }
+
+    private func resetMaintenanceTapSequence() {
+        maintenanceTapCount = 0
+        firstMaintenanceTapDate = nil
     }
 }
 
@@ -259,7 +306,7 @@ struct SetupLandingPage: View {
 
             VStack(spacing: 28) {
                 VStack(spacing: 12) {
-                    Image("fallback")
+                    Image("gcemsLogo")
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: 180)

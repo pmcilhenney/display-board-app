@@ -301,7 +301,7 @@ struct SetupLandingPage: View {
 
     var body: some View {
         ZStack {
-            Color(.systemGroupedBackground)
+            Color.white
                 .ignoresSafeArea()
 
             VStack(spacing: 28) {
